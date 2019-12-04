@@ -1,0 +1,10 @@
+trang base.html là trang chủ phần header dùng chung nên để chúng kế thừa
+còn trang index.html với trang questionPage.html kế thừ từ trang base.html
+
+http://127.0.0.1:8080/polls/list/
+dữ liệu được lấy từ db
+vào địa chỉ question và choice
+http://127.0.0.1:8080/polls/
+trang user lấy từ dữ liệu có sẵn 
+
+python manage.py runserver 8080
