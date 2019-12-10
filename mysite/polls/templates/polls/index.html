@@ -65,6 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		{% include "polls/includes/header-top.html"%}
 		{% include "polls/includes/header-bottom.html"%}
 
+
 		<div class="page">
 			<h6><a href="#">Page Title</a><b>|</b>Page description The quick, brown <span class="for">fox jumps over a lazy dog. DJs flock by when TV ax quiz prog.</span></h6>
 		</div>
@@ -80,148 +81,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 				<div class="content-bottom">
 					<h3>Featured products</h3>
-					<div class="bottom-grid">
-						<div class="col-md-4 shirt">
+					<div class="bottom-grid">				
+					{% for item in sanpham %}
+					<div class="col-md-4 shirt">
 							<div class="bottom-grid-top">
-								<a href="{% url 'single' %}"><img class="img-responsive" src="{% static 'polls/images/sh.png' %}" alt="" >
+								<a href="{% url 'single' %}"><img class="img-responsive" style="height: 144px;" src="{% static item.HinhAnh %}" alt="" >
 								<div class="five">
-									<h6 >-50%</h6>
+									<h6 >{{item.GiaDaGiam}}%</h6>
 								</div>
 								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
+									<p>{{item.Ten}}</p>
+									<span>${{item.GiaBan}}</span>
 									<div class="clearfix"> </div>
 								</div></a>
 								
 								
 							</div>
 						</div>
-						<div class="col-md-4 shirt">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single' %}"><img class="img-responsive" src="{% static 'polls/images/sh2.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one" >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-4 shirt">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single' %}"><img class="img-responsive" src="{% static 'polls/images/sh1.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one1" >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="bottom-grid">
-						<div class="col-md-4 shirt">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single' %}"><img class="img-responsive" src="{% static 'polls/images/sh2.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one" >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-4 shirt">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single' %}"><img class="img-responsive" src="{% static 'polls/images/sh3.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one1">-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-4 shirt">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single' %}"><img class="img-responsive" src="{% static 'polls/images/sh4.png' %}" alt="" >
-								<div class="five">
-								<h6 >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="bottom-grid">
-						<div class="col-md-4 shirt">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single' %}"><img class="img-responsive" src="{% static 'polls/images/sh5.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one1">-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-4 shirt">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single' %}"><img class="img-responsive" src="{% static 'polls/images/sh.png' %}" alt="" >
-								<div class="five">
-								<h6 >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-4 shirt">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single' %}"><img class="img-responsive" src="{% static 'polls/images/sh.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one">-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
+					{% endfor %}
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -256,19 +133,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<input type="checkbox"  id="brand1" value="">
 							<label for="brand1"><span></span> <b>Rs.3000-Rs.2000</b></label>
 						</a>
-						<a href="#">
-							<input type="checkbox"  id="brand2" value="">
-							<label for="brand2"><span></span> <b>Rs.2000-Rs.1000</b></label>
-						</a>
-						<a href="#">
-							<input type="checkbox"  id="brand3" value="">
-							<label for="brand3"><span></span> <b>Rs.1000-Rs.500</b></label>
-						</a>
-						<a href="#">
-							<input type="checkbox"  id="brand4" value="">
-							<label for="brand4"><span></span><b>Rs.500-below</b></label>
-						</a>
-						
 					</div>
 
 						</div>
@@ -281,28 +145,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</ul>
 							
 				<div class="single-bottom">
-						
-						
+						{% for item in sanpham%}
 						<a href="#">
-							<input type="checkbox"  id="nike" value="">
-							<label for="nike"><span></span><b>Nike</b></label>
-						</a>
-						<a href="#">
-							<input type="checkbox"  id="nike1" value="">
-							<label for="nike1"><span></span> <b>Reebok</b></label>
-						</a>
-						<a href="#">
-							<input type="checkbox"  id="nike2" value="">
-							<label for="nike2"><span></span><b> Fila</b></label>
-						</a>
-						<a href="#">
-							<input type="checkbox"  id="nike3" value="">
-							<label for="nike3"><span></span> <b>Puma</b></label>
-						</a>
-						<a href="#">
-							<input type="checkbox"  id="nike4" value="">
-							<label for="nike4"><span></span><b>Sparx</b></label>
-						</a>
+								<input type="checkbox"  id="nike4" value="">
+								<label for="nike4"><span></span><b>{{item.NhaCungCap}}</b></label>
+							</a>
+						{% endfor %}
 					</div>
 
 						</div>
@@ -319,13 +167,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li><a class="color3" href="#"></a></li>
 				<li><a class="color4" href="#"></a></li>
 				<li><a class="color5" href="#"></a></li>
-				<li><a class="color6" href="#"></a></li>
-				<li><a class="color7" href="#"></a></li>
-				<li><a class="color8" href="#"></a></li>
-				<li><a class="color9" href="#"></a></li>
-				<li><a class="color10" href="#"></a></li>
-				<li><a class="color12" href="#"></a></li>
-				<li><a class="color13" href="#"></a></li>
 				<li><a class="color14" href="#"></a></li>
 				<li><a class="color15" href="#"></a></li>
 				<li><a class="color5" href="#"></a></li>

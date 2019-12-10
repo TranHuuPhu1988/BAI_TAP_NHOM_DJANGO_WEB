@@ -1,9 +1,13 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import SanPham
+from .models import DonHang
+from .models import NhaCungCap
 
 def index(request):
-    return render(request ,"polls/index.html")
+    sanpham = SanPham.objects.all()
+    context = {"sanpham": sanpham }
+    return render(request ,"polls/index.html",context)
 
 def account(request):
     return render(request ,"polls/account.html")
@@ -15,7 +19,9 @@ def NotFound(request):
     return render(request ,"polls/404.html")
 
 def cart(request):
-    return render(request ,"polls/cart.html")
+    carts = DonHang.objects.all()
+    context = {"cart": carts }
+    return render(request ,"polls/cart.html",context)
 
 def gifts(request):
     return render(request ,"polls/gifts.html")
