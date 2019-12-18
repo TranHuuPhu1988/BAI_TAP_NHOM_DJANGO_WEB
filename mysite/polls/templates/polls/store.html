@@ -71,190 +71,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="content-bottom store">
 					<h3>products</h3>
 					<div class="bottom-grid">
+					
+						{% for item in sanpham %}
 						<div class="col-md-3 store-top">
 							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh.png' %}" alt="" >
+								<a href="{% url 'single'%}"><img class="img-responsive" style="height: 144px;" src="{% static item.HinhAnh %}" alt="" >
 								<div class="five">
-								<h6 class="one">-50%</h6>
+								<h6 class="one">{{item.GiaDaGiam}}%</h6>
 								</div>
 								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh1.png' %}" alt="" >
-								<div class="five">
-								<h6 >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh2.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one1">-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh3.png' %}" alt="" >
-								<div class="five">
-								<h6 >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="bottom-grid">
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh4.png' %}" alt="" >
-								<div class="five">
-								<h6 >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh5.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one">-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh5.png' %}" alt="" >
-								<div class="five">
-								<h6 >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh1.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one1">-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="bottom-grid">
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh2.png' %}" alt="" >
-								<div class="five">
-								<h6 >-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh3.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one">-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh4.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one1">-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
-									<div class="clearfix"> </div>
-								</div></a>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-3 store-top">
-							<div class="bottom-grid-top">
-								<a href="{% url 'single'%}"><img class="img-responsive" src="{% static 'polls/images/sh5.png' %}" alt="" >
-								<div class="five">
-								<h6 class="one">-50%</h6>
-								</div>
-								<div class="pre">
-									<p>Pure Slim Xe</p>
-									<span>$60.00</span>
+									<p>{{item.Ten}}</p>
+									<span>${{item.GiaBan}}</span>
 									<div class="clearfix"> </div>
 								</div></a>
 							</div>
 						</div>
+						{% endfor %}
 						<div class="clearfix"> </div>
 					</div>
 				</div>

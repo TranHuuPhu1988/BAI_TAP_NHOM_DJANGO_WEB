@@ -30,7 +30,9 @@ def register(request):
     return render(request ,"polls/register.html")
 
 def store(request):
-    return render(request ,"polls/store.html")
+    sanpham = SanPham.objects.all()
+    context = {"sanpham": sanpham }
+    return render(request ,"polls/store.html",context)
 
 def wishlist(request):
     return render(request ,"polls/wishlist.html")
