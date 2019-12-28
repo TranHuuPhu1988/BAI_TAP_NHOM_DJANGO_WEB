@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .models import SanPham
 from .models import DonHang
 from .models import NhaCungCap
+from .models import Order
 
 def index(request):
     sanpham = SanPham.objects.all()
@@ -38,5 +39,12 @@ def wishlist(request):
     return render(request ,"polls/wishlist.html")
     
 def single(request):
-    return render(request ,"polls/single.html")
+    order = Order.object().all()
+    context = {"order":order}
+    return render(request ,"polls/single.html",context)
     
+def checkout(request):
+    if request.method == "POST":
+        images = request.POST.get('images','')
+        GiaDaGiam = request.POST.get('GiaDaGiam','')
+        Ten = request.POST.get('Ten','')

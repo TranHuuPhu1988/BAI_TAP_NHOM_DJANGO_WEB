@@ -69,18 +69,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="content">
 		<div class="account-in">
+			<form method="POST">
 							<h2>Account</h2>
 							<div class="col-md-7 account-top">
 								<form>
 									
 								<div> 	
-									<span>Email*</span>
-									<input type="text"> 
+									<span>Email*{{form.username}}</span>
+									<!-- <input type="text">  -->
+									
 								</div>
 								<div> 
-									<span  class="pass">Password*</span>
-									<input type="password">
-								</div>				
+									<span  class="pass">Password*{{form.password}}</span>
+								</div>		
+									<input type="hidden" name="next" value="/">
 									<input type="submit" value="Login"> 
 								</form>
 							</div>
@@ -93,7 +95,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="clearfix"> </div>
 							</div>
 						<div class="clearfix"> </div>
-					</div>	
+				</form>
+		</div>	
 
 	
 		</div>

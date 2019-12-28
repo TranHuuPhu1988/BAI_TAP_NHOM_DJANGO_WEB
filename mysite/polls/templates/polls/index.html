@@ -94,10 +94,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<span>${{item.GiaBan}}</span>
 									<div class="clearfix"> </div>
 								</div></a>
-								
-								
 							</div>
-						</div>
+					</div>
+					<form method="POST" action="/single/">
+						<input type="hidden" id="images" value="{% static item.HinhAnh %}">
+						<input type="hidden" id="GiaDaGiam" value="{{item.GiaDaGiam}}">
+						<input type="hidden" id="Ten" value="{{item.Ten}}">
+						<input type="hidden" id="GiaBan" value="{{item.GiaBan}}">
+					</form>
 					{% endfor %}
 						<div class="clearfix"> </div>
 					</div>
