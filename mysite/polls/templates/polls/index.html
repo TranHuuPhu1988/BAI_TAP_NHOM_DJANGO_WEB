@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 		<div class="page">
-			<h6><a href="#">Page Title</a><b>|</b>Page description The quick, brown <span class="for">fox jumps over a lazy dog. DJs flock by when TV ax quiz prog.</span></h6>
+			
 		</div>
 		<div class="content">
 
@@ -94,14 +94,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<span>${{item.GiaBan}}</span>
 									<div class="clearfix"> </div>
 								</div></a>
+								
+								
 							</div>
-					</div>
-					<form method="POST" action="/single/">
-						<input type="hidden" id="images" value="{% static item.HinhAnh %}">
-						<input type="hidden" id="GiaDaGiam" value="{{item.GiaDaGiam}}">
-						<input type="hidden" id="Ten" value="{{item.Ten}}">
-						<input type="hidden" id="GiaBan" value="{{item.GiaBan}}">
-					</form>
+						</div>
 					{% endfor %}
 						<div class="clearfix"> </div>
 					</div>

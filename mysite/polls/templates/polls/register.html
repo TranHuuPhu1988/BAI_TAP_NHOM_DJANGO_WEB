@@ -65,27 +65,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 		<div class="page">
-			<h6><a href="#">Page Title</a><b>|</b>Page description The quick, brown <span class="for">fox jumps over a lazy dog. DJs flock by when TV ax quiz prog.</span></h6>
+			
 		</div>
 		<div class="content">
 		<div class="account-in register-top">
 							<h2>Register</h2>
 							<div class=" account-top register">
-								<form>
-								<div> 	
-									<span>Name*</span>
-									<input type="text"> 
-								</div>
-								<div> 	
-									<span>Email*</span>
-									<input type="text"> 
-								</div>
-								<div> 
-									<span  class="pass">Password*</span>
-									<input type="password">
-								</div>				
-									<input type="submit" value="Submit"> 
-								</form>
+								 <form action="." method="POST">
+           							 {% csrf_token %}
+           							 {{form.as_p}}
+						            <input type="submit" value="Đăng ký"/>
+						        </form>
 							</div>
 							
 					</div>	

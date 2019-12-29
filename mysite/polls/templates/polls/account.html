@@ -65,26 +65,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 		<div class="page">
-			<h6><a href="#">Page Title</a><b>|</b>Page description The quick, brown <span class="for">fox jumps over a lazy dog. DJs flock by when TV ax quiz prog.</span></h6>
+			
 		</div>
 		<div class="content">
 		<div class="account-in">
-			<form method="POST">
-							<h2>Account</h2>
+							<h2>Login</h2>
 							<div class="col-md-7 account-top">
-								<form>
-									
-								<div> 	
-									<span>Email*{{form.username}}</span>
-									<!-- <input type="text">  -->
-									
-								</div>
-								<div> 
-									<span  class="pass">Password*{{form.password}}</span>
-								</div>		
-									<input type="hidden" name="next" value="/">
-									<input type="submit" value="Login"> 
-								</form>
+								 <form method="POST">
+							         {% csrf_token %}
+								        {% for key, value in form.errors.items %}
+								            {{value}}
+								        {% endfor %}
+							        <p><label>Tài khoản:</label>{{form.username}}</p>
+        							<p><label>Mật khẩu:</label>{{form.password}}</p>
+        							 <input type="hidden" name="next" value="/"/>
+							        <input type="submit" value="Đăng nhập"/>
+							    </form>
 							</div>
 							<div class="col-md-5 left-account ">
 								<a href="{% url 'single' %}"><img class="img-responsive " src="images/ac.jpg" alt=""></a>
@@ -95,8 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="clearfix"> </div>
 							</div>
 						<div class="clearfix"> </div>
-				</form>
-		</div>	
+					</div>	
 
 	
 		</div>

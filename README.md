@@ -1,9 +1,14 @@
-﻿
--TRẦN HỮU PHÚ
+﻿---------------------------ĐỀ TÀI : WEBSITE QUẢN LÝ BÁN HÀNG---------------------
+---------------------------NGÔN NGỮ : Python-------------------------------
+---------------------------FrameWork : Django------------------------------------
+---------------------------Nhóm : 3
+-THÀNH VIÊN:
 
--LẦM QUỐC TUẤN
+-Trần Hữu Phú
 
--LÊ HỒNG TẤN SANG
+-Lâm Quốc Tuấn
 
--NGUYỄN VĂN HIẾU 
+-Lê Hồng Tấn Sang
+
+-Nguyễn Văn Hiếu
 

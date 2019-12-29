@@ -1,5 +1,4 @@
 from django.db import models
-
 class NhaCungCap(models.Model):
     MaNhaCungCap = models.CharField(max_length=200, primary_key=True)
     TenNhaCungCap = models.CharField(max_length=200)
@@ -17,7 +16,6 @@ class TaiKhoang(models.Model):
     TenTaiKhoang = models.CharField(max_length=200 , primary_key=True)
     MatKhau = models.CharField(max_length=200)
     Email = models.CharField(max_length=200)
-
 
 class SanPham(models.Model):
     MaSanPham = models.CharField(max_length=200, primary_key=True)
@@ -46,9 +44,3 @@ class DonHang(models.Model):
     DiaChi = models.CharField(max_length=200)
     Email= models.CharField(max_length=200)
     TinhTrangDonHang = models.CharField(max_length=200)
-
-class Order(models.Model):
-    MaOrder = models.CharField(max_length=200,primary_key=True)
-    Images = models.CharField(max_length=200)
-    GiaDaGiam = models.IntegerField(default=0)
-    TenSanPham = models.CharField(max_length=200)
