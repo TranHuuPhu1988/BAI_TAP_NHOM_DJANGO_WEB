@@ -12,3 +12,5 @@
 
 -Nguyễn Văn Hiếu
 
+Tài Khoản admin: admin2
+Mật khẩu admin:  admin123
